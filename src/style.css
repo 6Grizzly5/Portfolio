@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+:root {
+    --soft-butter: #FFF1A6;
+    --terracotta: #C47A5A;
+    --clay-brown: #6B352A;
+    --dark-brown: #3B2924;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--soft-butter);
+    color: var(--dark-brown);
+    font-family: Inter, system-ui, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--clay-brown);
+    color: var(--soft-butter);
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    color: #FFF1A6;
+
+    font-size: 0.875rem;
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #C47A5A;
+    transform: translateY(-1px);
+}
+
+
+/* Icônes cachées au départ */
+
+.nav-icon {
+    display: none;
+}
+
+
+/* Icône CV cachée au départ */
+
+.nav-cv-icon {
+    display: none;
+}
+
+
+/* ========================================
+   NAVBAR COMPACTE
+======================================== */
+
+#navbar-main.navbar-compact {
+    top: 0;
+    max-width: 430px;
+}
+
+
+/* Conteneur compact */
+
+#navbar-main.navbar-compact #navbar-container {
+    padding: 0.55rem 0.75rem;
+
+    border-radius: 9999px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(59, 41, 36, 0.25);
+}
+
+
+/* Logo réduit */
+
+#navbar-main.navbar-compact #navbar-container > a:first-child {
+    font-size: 0.95rem;
+}
+
+
+/* Liens compacts */
+
+#navbar-main.navbar-compact .nav-text {
+    display: none;
+}
+
+
+#navbar-main.navbar-compact .nav-icon {
+    display: block;
+
+    font-size: 1rem;
+
+    line-height: 1;
+}
+
+
+/* Navigation compacte */
+
+#navbar-main.navbar-compact #navbar-links {
+    gap: 1rem;
+}
+
+
+/* CV compact */
+
+#navbar-main.navbar-compact .nav-cv {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    padding: 0;
+
+    border-radius: 50%;
+}
+
+
+#navbar-main.navbar-compact .nav-cv-text {
+    display: none;
+}
+
+
+#navbar-main.navbar-compact .nav-cv-icon {
+    display: block;
+
+    font-size: 1.2rem;
+    font-weight: 800;
+}

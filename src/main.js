@@ -1,49 +1,105 @@
 import './style.css'
 
-import { Navbar } from './components/Navbar'
-import { About } from './components/About'
 
-import { aboutQuotes } from './data/aboutQuotes'
+/* ================================================
+   COMPONENTS
+================================================ */
 
-import { initTypewriter } from './animations/typewriter'
-import { initNavbarAnimation } from './animations/navbar'
+import { Navbar }
+    from './components/Navbar'
 
+import { Hero }
+    from './components/Hero'
+
+import { About }
+    from './components/About'
+
+import { Skills }
+    from './components/Skills'
+
+import { Projects }
+    from './components/Projects'
+
+import { Contact }
+    from './components/Contact'
+
+
+/* ================================================
+   DATA
+================================================ */
+
+import { aboutQuotes }
+    from './data/aboutQuotes'
+
+
+/* ================================================
+   ANIMATIONS
+================================================ */
+
+import { initNavbarAnimation }
+    from './animations/navbar'
+
+import { initScrollAnimations }
+    from './animations/scroll'
+
+import { initTypewriter }
+    from './animations/typewriter'
+
+
+/* ================================================
+   APPLICATION
+================================================ */
 
 document.querySelector('#app').innerHTML = `
 
-    <main class="min-h-screen bg-[#FFF1A6]">
-
-        <header id="navbar">
-            ${Navbar()}
-        </header>
+    <main class="page">
 
 
-        <section id="hero"></section>
+        ${Navbar()}
 
 
-        <section id="skills"></section>
-
-
-        <section id="projects"></section>
+        ${Hero()}
 
 
         ${About()}
 
 
-        <section id="contact"></section>
+        ${Skills()}
 
 
-        <footer id="footer"></footer>
+        ${Projects()}
+
+
+        ${Contact()}
+
 
     </main>
 
 `
 
 
+/* ================================================
+   TYPEWRITER
+================================================ */
+
 initTypewriter(
+
     document.querySelector('#typewriter'),
+
     aboutQuotes
+
 )
 
 
+/* ================================================
+   NAVBAR ANIMATION
+================================================ */
+
 initNavbarAnimation()
+
+
+/* ================================================
+   SCROLL ANIMATIONS
+================================================ */
+
+initScrollAnimations()

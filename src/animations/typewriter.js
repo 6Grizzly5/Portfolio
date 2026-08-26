@@ -1,80 +1,116 @@
-export function initTypewriter(element, phrases) {
+export function initTypewriter(
+    element,
+    phrases
+) {
 
-    if (!element || !phrases.length) {
+    if (!element || !phrases?.length) {
         return
     }
 
-    let currentPhrase = ""
-    let phraseIndex = Math.floor(Math.random() * phrases.length)
 
+    let currentPhrase = ''
+    let phraseIndex = 0
     let characterIndex = 0
-    let isDeleting = false
+
+    let deleting = false
 
 
-    function getNextPhrase() {
+    function getRandomPhrase() {
 
-        let nextIndex
+        let index
 
         do {
-            nextIndex = Math.floor(Math.random() * phrases.length)
+
+            index =
+                Math.floor(
+                    Math.random() * phrases.length
+                )
+
         } while (
             phrases.length > 1 &&
-            nextIndex === phraseIndex
+            index === phraseIndex
         )
 
-        phraseIndex = nextIndex
+        phraseIndex = index
 
-        return phrases[phraseIndex]
+        return phrases[index]
     }
+
+
+    currentPhrase =
+        getRandomPhrase()
 
 
     function type() {
 
-        currentPhrase = phrases[phraseIndex]
+        const target =
+            currentPhrase
 
 
-        if (!isDeleting) {
-
-            element.textContent =
-                currentPhrase.substring(0, characterIndex + 1)
+        if (!deleting) {
 
             characterIndex++
 
+            element.textContent =
+                target.substring(
+                    0,
+                    characterIndex
+                )
 
-            if (characterIndex === currentPhrase.length) {
 
-                isDeleting = true
+            if (
+                characterIndex >=
+                target.length
+            ) {
 
-                setTimeout(type, 2200)
+                deleting = true
+
+                setTimeout(
+                    type,
+                    1800
+                )
 
                 return
             }
 
-        } else {
 
-            element.textContent =
-                currentPhrase.substring(0, characterIndex - 1)
+            setTimeout(
+                type,
+                55
+            )
+
+        } else {
 
             characterIndex--
 
+            element.textContent =
+                target.substring(
+                    0,
+                    characterIndex
+                )
 
-            if (characterIndex === 0) {
 
-                isDeleting = false
+            if (characterIndex <= 0) {
 
-                getNextPhrase()
+                deleting = false
 
+                currentPhrase =
+                    getRandomPhrase()
+
+                setTimeout(
+                    type,
+                    300
+                )
+
+                return
             }
 
+
+            setTimeout(
+                type,
+                30
+            )
         }
-
-
-        const typingSpeed = isDeleting
-            ? 35
-            : 70
-
-
-        setTimeout(type, typingSpeed)
     }
 
 

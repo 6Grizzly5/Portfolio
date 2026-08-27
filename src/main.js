@@ -23,6 +23,9 @@ import { Projects }
 import { Contact }
     from './components/Contact'
 
+import { FloatingTech }
+    from './components/FloatingTech'
+
 
 /* ================================================
    DATA
@@ -46,6 +49,10 @@ import { initTypewriter }
     from './animations/typewriter'
 
 
+import { initFloatingTech }
+    from './components/FloatingTech'
+
+
 /* ================================================
    APPLICATION
 ================================================ */
@@ -54,6 +61,7 @@ document.querySelector('#app').innerHTML = `
 
     <main class="page">
 
+        ${FloatingTech()}
 
         ${Navbar()}
 
@@ -103,3 +111,5 @@ initNavbarAnimation()
 ================================================ */
 
 initScrollAnimations()
+
+initFloatingTech()

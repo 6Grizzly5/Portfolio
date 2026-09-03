@@ -68,7 +68,7 @@ export function Navbar() {
                 ====================================== -->
 
                 <a
-                    href="/cv/CV_Prosper_Razanaka.pdf"
+                    href="/cv/CV_Prosper.pdf"
                     download
                     class="navbar-cv"
                 >

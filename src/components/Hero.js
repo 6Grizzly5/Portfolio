@@ -86,7 +86,7 @@ export function Hero() {
                     <div class="hero-image-wrapper">
 
                         <img
-                            src="/images/prosper3.png"
+                            src="/images/prosper4.png"
                             alt="RAZANAKA Prosper Andriniaina Félix"
                             class="hero-image"
                         >

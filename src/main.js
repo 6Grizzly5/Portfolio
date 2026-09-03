@@ -5,9 +5,11 @@ import './style.css'
    COMPONENTS
 ================================================ */
 
-import { Navbar }
-    from './components/Navbar'
-
+import {
+    Navbar,
+    initNavbar
+}
+from './components/Navbar'
 import { Hero }
     from './components/Hero'
 
@@ -104,6 +106,7 @@ initTypewriter(
 ================================================ */
 
 initNavbarAnimation()
+initNavbar()
 
 
 /* ================================================

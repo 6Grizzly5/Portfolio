@@ -214,7 +214,7 @@ export function Navbar() {
 
 
                     <a
-                        href="/public/cv/CV_Prosper.pdf"
+                        href="/public/images/prosper2.jpg"
                         download
                         class="mobile-cv-link"
                         target= "_blank"

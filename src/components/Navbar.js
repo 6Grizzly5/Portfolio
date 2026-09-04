@@ -213,13 +213,20 @@ export function Navbar() {
                     <div class="mobile-menu-divider"></div>
 
 
+                    // <a
+                    //     href="/public/images/prosper2.jpg"
+                    //     download
+                    //     class="mobile-cv-link"
+                    //     target= "_blank"
+                    // >
+                    //     Télécharger mon CV
+                    // </a>
                     <a
-                        href="/public/images/prosper2.jpg"
-                        download
+                        href="/cv/CV_Prosper.pdf"
+                        download="CV_Prosper.pdf"
                         class="mobile-cv-link"
-                        target= "_blank"
                     >
-                        Télécharger mon CV
+                        Mon CV
                     </a>
 
                 </div>

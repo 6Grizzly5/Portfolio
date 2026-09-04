@@ -217,6 +217,7 @@ export function Navbar() {
                         href="/public/cv/CV_Prosper.pdf"
                         download
                         class="mobile-cv-link"
+                        target= "_blank"
                     >
                         Télécharger mon CV
                     </a>

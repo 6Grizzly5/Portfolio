@@ -123,9 +123,9 @@ export function Navbar() {
                 ====================================== -->
 
                 <a
-                    href="public/cv/CV_Prosper.pdf"
-                    download
-                    class="navbar-cv"
+                    href="/cv/CV_Prosper.pdf"
+                    download="CV_Prosper.pdf"
+                    class="mobile-cv-link"
                 >
                     Mon CV
                 </a>

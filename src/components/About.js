@@ -64,10 +64,7 @@ export function About() {
                             <span
                                 id="typewriter"
                                 class="typewriter"
-                            ></span>
-
-                            <span
-                                class="typewriter-cursor"
+                                aria-live="polite"
                             ></span>
 
                         </div>

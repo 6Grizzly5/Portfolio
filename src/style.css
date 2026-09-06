@@ -3001,3 +3001,1115 @@ span:nth-child(3) {
     }
 
 }
+
+/* =====================================================
+   FINAL VISUAL LAYER
+   TYPEWRITER + FLOATING TECHNOLOGIES
+===================================================== */
+
+
+/* =====================================================
+   TYPEWRITER
+===================================================== */
+
+.typewriter-container {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    width: 100%;
+
+    /*
+     * Hauteur réservée.
+     * Le contenu situé dessous ne bougera plus.
+     */
+    height: 5.2em;
+
+    min-height: 5.2em;
+
+    max-width: 720px;
+
+    margin-bottom: 32px;
+
+    font-size:
+        clamp(
+            1.15rem,
+            2vw,
+            1.6rem
+        );
+
+    line-height: 1.45;
+
+    font-weight: 700;
+
+    overflow: hidden;
+}
+
+
+/* ============================================
+   "JE SUIS"
+============================================ */
+
+.typewriter-prefix {
+
+    flex:
+        0 0 auto;
+
+    margin-right: 9px;
+
+    color:
+        var(--text-muted);
+
+    line-height: 1.45;
+}
+
+
+/* ============================================
+   TEXTE ANIMÉ
+============================================ */
+
+.typewriter {
+
+    /*
+     * Permet au texte de réellement
+     * se réduire dans son conteneur.
+     */
+    min-width: 0;
+
+    flex:
+        1 1 auto;
+
+    color:
+        var(--black);
+
+    line-height: 1.45;
+
+    overflow-wrap:
+        break-word;
+
+    word-break:
+        normal;
+
+    white-space:
+        normal;
+}
+
+
+/* ============================================
+   CURSEUR
+============================================ */
+
+.typewriter::after {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 2px;
+
+    height: 1.15em;
+
+    margin-left: 6px;
+
+    vertical-align:
+        -0.15em;
+
+    background:
+        var(--black);
+
+    animation:
+        cursorBlink
+        0.8s
+        infinite;
+}
+
+
+/* ============================================
+   CURSEUR ANIMATION
+============================================ */
+
+@keyframes cursorBlink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   FLOATING TECHNOLOGY LAYER
+===================================================== */
+
+/*
+ * Niveau 2 :
+ * entre le background des sections
+ * et leur contenu.
+ */
+
+.floating-tech {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+/*
+ * Les sections restent légèrement transparentes.
+ * Les logos peuvent donc être aperçus à travers.
+ */
+
+.page-section {
+
+    background:
+        rgba(
+            245,
+            245,
+            242,
+            0.91
+        );
+}
+
+
+/*
+ * Le contenu réel passe devant les logos.
+ */
+
+.page-section > .section-inner {
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/*
+ * Hero utilise section-inner également,
+ * mais on sécurise son contenu.
+ */
+
+.hero-scroll {
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =====================================================
+   FLOATING LOGO
+===================================================== */
+
+.floating-tech-logo {
+
+    position: absolute;
+
+    display: block;
+
+    color:
+        #707070;
+
+    opacity: 0;
+
+    filter:
+        grayscale(1)
+        blur(0.15px);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--float-rotation))
+        scale(0.25);
+
+    animation:
+        floatingTechAppear
+        var(--float-duration)
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        var(--float-delay)
+        forwards;
+}
+
+
+/* =====================================================
+   FLOATING ANIMATION
+===================================================== */
+
+@keyframes floatingTechAppear {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                -50%,
+                -35%
+            )
+            rotate(
+                var(--float-rotation)
+            )
+            scale(0.25);
+    }
+
+
+    15% {
+
+        opacity: 0.16;
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            )
+            rotate(
+                calc(
+                    var(--float-rotation)
+                    + 4deg
+                )
+            )
+            scale(1);
+    }
+
+
+    40% {
+
+        opacity: 0.11;
+
+        transform:
+            translate(
+                -48%,
+                -75%
+            )
+            rotate(
+                calc(
+                    var(--float-rotation)
+                    - 3deg
+                )
+            )
+            scale(1.05);
+    }
+
+
+    70% {
+
+        opacity: 0.08;
+
+        transform:
+            translate(
+                -52%,
+                -110%
+            )
+            rotate(
+                calc(
+                    var(--float-rotation)
+                    + 5deg
+                )
+            )
+            scale(0.95);
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                -50%,
+                -145%
+            )
+            rotate(
+                calc(
+                    var(--float-rotation)
+                    + 8deg
+                )
+            )
+            scale(0.7);
+    }
+}
+
+
+/* =====================================================
+   SKILL LOGOS
+===================================================== */
+
+.skill-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+
+.skill-item {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        9px 13px;
+
+    background:
+        var(--background);
+
+    border-radius:
+        var(--radius-pill);
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        700;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.skill-item i {
+
+    font-size:
+        1rem;
+
+    color:
+        var(--black);
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.skill-item:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        var(--black);
+
+    color:
+        var(--white);
+}
+
+
+.skill-item:hover i {
+
+    color:
+        var(--white);
+
+    transform:
+        scale(1.12)
+        rotate(-5deg);
+}
+
+
+/*
+ * Version sombre
+ */
+
+.skill-card-dark
+.skill-item {
+
+    background:
+        #292929;
+
+    color:
+        #CCCCCC;
+}
+
+
+.skill-card-dark
+.skill-item i {
+
+    color:
+        #FFFFFF;
+}
+
+
+.skill-card-dark
+.skill-item:hover {
+
+    background:
+        #FFFFFF;
+
+    color:
+        #111111;
+}
+
+
+.skill-card-dark
+.skill-item:hover i {
+
+    color:
+        #111111;
+}
+
+
+/* =====================================================
+   SKILL CARD ENHANCEMENT
+===================================================== */
+
+.skill-card {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.skill-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    right: -80px;
+
+    bottom: -90px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(
+            17,
+            17,
+            17,
+            0.07
+        );
+
+    pointer-events: none;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.skill-card:hover::after {
+
+    transform:
+        scale(1.25);
+}
+
+
+/* =====================================================
+   ROADMAP
+===================================================== */
+
+.roadmap-section {
+
+    min-height:
+        auto;
+}
+
+
+.roadmap-intro {
+
+    max-width:
+        650px;
+
+    margin-top:
+        24px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+}
+
+
+/* ============================================
+   TIMELINE
+============================================ */
+
+.roadmap {
+
+    position: relative;
+
+    margin-top:
+        100px;
+}
+
+
+/*
+ * Ligne centrale
+ */
+
+.roadmap::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    background:
+        rgba(
+            17,
+            17,
+            17,
+            0.14
+        );
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* ============================================
+   EVENT
+============================================ */
+
+.roadmap-item {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        80px
+        1fr;
+
+    align-items: center;
+
+    min-height:
+        220px;
+
+    margin-bottom:
+        30px;
+}
+
+
+/*
+ * Dernier élément
+ */
+
+.roadmap-item:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* ============================================
+   DATE / NUMÉRO
+============================================ */
+
+.roadmap-meta {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.7rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.15em;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* ============================================
+   CENTRAL NODE
+============================================ */
+
+.roadmap-node {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    margin:
+        0 auto;
+
+    background:
+        var(--black);
+
+    border:
+        6px solid
+        var(--surface);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--white);
+
+    font-size:
+        0.65rem;
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.14
+        );
+}
+
+
+/* ============================================
+   CARD
+============================================ */
+
+.roadmap-card {
+
+    position: relative;
+
+    padding:
+        30px;
+
+    background:
+        var(--surface-white);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        28px;
+
+    box-shadow:
+        var(--shadow-soft);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.roadmap-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow-medium);
+}
+
+
+/*
+ * Alternance gauche / droite
+ */
+
+.roadmap-item:nth-child(
+    odd
+) .roadmap-card {
+
+    grid-column:
+        1;
+
+    grid-row:
+        1;
+
+    text-align:
+        right;
+}
+
+
+.roadmap-item:nth-child(
+    odd
+) .roadmap-meta {
+
+    grid-column:
+        1;
+
+    grid-row:
+        1;
+
+    align-self:
+        start;
+
+    padding-top:
+        25px;
+
+    padding-right:
+        24px;
+
+    text-align:
+        right;
+}
+
+
+.roadmap-item:nth-child(
+    even
+) .roadmap-card {
+
+    grid-column:
+        3;
+
+    grid-row:
+        1;
+}
+
+
+.roadmap-item:nth-child(
+    even
+) .roadmap-meta {
+
+    grid-column:
+        3;
+
+    grid-row:
+        1;
+
+    align-self:
+        start;
+
+    padding-top:
+        25px;
+
+    padding-left:
+        24px;
+
+    text-align:
+        left;
+}
+
+
+/*
+ * Node toujours au centre
+ */
+
+.roadmap-item .roadmap-node {
+
+    grid-column:
+        2;
+
+    grid-row:
+        1;
+}
+
+
+/* ============================================
+   CARD CONTENT
+============================================ */
+
+.roadmap-card-number {
+
+    display:
+        block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.65rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.15em;
+}
+
+
+.roadmap-card h3 {
+
+    margin:
+        0 0 12px;
+
+    color:
+        var(--black);
+
+    font-size:
+        clamp(
+            1.4rem,
+            2.5vw,
+            2.2rem
+        );
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.04em;
+}
+
+
+.roadmap-card p {
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.9rem;
+
+    line-height:
+        1.7;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /*
+     * Typewriter
+     */
+
+    .typewriter-container {
+
+        height:
+            6.2em;
+
+        min-height:
+            6.2em;
+
+        max-width:
+            100%;
+
+        font-size:
+            1.05rem;
+
+        line-height:
+            1.5;
+    }
+
+
+    .typewriter-prefix {
+
+        margin-right:
+            7px;
+    }
+
+
+    /*
+     * Floating logos
+     */
+
+    .floating-tech-logo {
+
+        font-size:
+            24px !important;
+
+        opacity:
+            0;
+    }
+
+
+    /*
+     * Roadmap
+     */
+
+    .roadmap {
+
+        margin-top:
+            60px;
+
+        padding-left:
+            26px;
+    }
+
+
+    .roadmap::before {
+
+        left:
+            0;
+    }
+
+
+    .roadmap-item {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            44px
+            1fr;
+
+        min-height:
+            auto;
+
+        margin-bottom:
+            24px;
+    }
+
+
+    .roadmap-item .roadmap-node {
+
+        grid-column:
+            1;
+
+        grid-row:
+            1;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        margin-left:
+            -21px;
+    }
+
+
+    .roadmap-item:nth-child(
+        odd
+    ) .roadmap-card,
+
+    .roadmap-item:nth-child(
+        even
+    ) .roadmap-card {
+
+        grid-column:
+            2;
+
+        grid-row:
+            1;
+
+        text-align:
+            left;
+    }
+
+
+    .roadmap-item:nth-child(
+        odd
+    ) .roadmap-meta,
+
+    .roadmap-item:nth-child(
+        even
+    ) .roadmap-meta {
+
+        grid-column:
+            2;
+
+        grid-row:
+            1;
+
+        align-self:
+            start;
+
+        padding:
+            16px 20px 0;
+
+        text-align:
+            left;
+
+        pointer-events:
+            none;
+    }
+
+
+    .roadmap-card {
+
+        padding:
+            28px 22px 24px;
+
+        padding-top:
+            54px;
+    }
+
+
+    .roadmap-card-number {
+
+        margin-bottom:
+            8px;
+    }
+
+}
+/* =====================================================
+   FLOATING TECH - LAYER FIX
+===================================================== */
+
+.page > *:not(.floating-tech) {
+    position: relative;
+    z-index: auto;
+}
+
+
+/*
+ * Les vrais contenus restent au-dessus
+ * des logos flottants.
+ */
+
+.page-section > .section-inner {
+    position: relative;
+    z-index: 3;
+}
+
+
+.hero-scroll {
+    z-index: 3;
+}
+
+
+#navbar-main {
+    z-index: 1000;
+}

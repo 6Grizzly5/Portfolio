@@ -9,11 +9,16 @@ export function initTypewriter(
 
 
     let currentPhrase = ''
-    let phraseIndex = 0
+    let phraseIndex = -1
     let characterIndex = 0
-
     let deleting = false
 
+
+    /*
+    ============================================
+    CHOISIR UNE PHRASE ALÉATOIRE
+    ============================================
+    */
 
     function getRandomPhrase() {
 
@@ -23,7 +28,8 @@ export function initTypewriter(
 
             index =
                 Math.floor(
-                    Math.random() * phrases.length
+                    Math.random() *
+                    phrases.length
                 )
 
         } while (
@@ -37,30 +43,32 @@ export function initTypewriter(
     }
 
 
-    currentPhrase =
-        getRandomPhrase()
-
+    /*
+    ============================================
+    ÉCRITURE
+    ============================================
+    */
 
     function type() {
-
-        const target =
-            currentPhrase
-
 
         if (!deleting) {
 
             characterIndex++
 
             element.textContent =
-                target.substring(
+                currentPhrase.substring(
                     0,
                     characterIndex
                 )
 
 
+            /*
+            Phrase terminée
+            */
+
             if (
                 characterIndex >=
-                target.length
+                currentPhrase.length
             ) {
 
                 deleting = true
@@ -74,45 +82,73 @@ export function initTypewriter(
             }
 
 
+            /*
+            Vitesse d'écriture
+            */
+
             setTimeout(
                 type,
                 55
             )
 
-        } else {
-
-            characterIndex--
-
-            element.textContent =
-                target.substring(
-                    0,
-                    characterIndex
-                )
+            return
+        }
 
 
-            if (characterIndex <= 0) {
+        /*
+        ========================================
+        SUPPRESSION
+        ========================================
+        */
 
-                deleting = false
+        characterIndex--
 
-                currentPhrase =
-                    getRandomPhrase()
+        element.textContent =
+            currentPhrase.substring(
+                0,
+                characterIndex
+            )
 
-                setTimeout(
-                    type,
-                    300
-                )
 
-                return
-            }
+        /*
+        Phrase complètement supprimée
+        */
 
+        if (characterIndex <= 0) {
+
+            deleting = false
+
+            currentPhrase =
+                getRandomPhrase()
 
             setTimeout(
                 type,
-                30
+                350
             )
+
+            return
         }
+
+
+        /*
+        Vitesse de suppression
+        */
+
+        setTimeout(
+            type,
+            30
+        )
     }
 
+
+    /*
+    ============================================
+    INITIALISATION
+    ============================================
+    */
+
+    currentPhrase =
+        getRandomPhrase()
 
     type()
 }

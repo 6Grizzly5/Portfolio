@@ -83,7 +83,13 @@ export function Hero() {
 
                 <div class="hero-visual">
 
-                    <div class="hero-image-wrapper">
+                    <div
+                        class="hero-image-wrapper"
+                        style="
+                            width: min(100%, 420px);
+                            height: 500px;
+                        "
+                    >
 
                         <img
                             src="/images/prosper4(2).jpg"

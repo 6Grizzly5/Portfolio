@@ -194,55 +194,63 @@ export function Skills() {
 
 
                     <!-- =================================
-                         Système d'exploitation
+                         OPERATING SYSTEMS
                     ================================== -->
 
-                    <article class="skill-card skill-card-dark">
+                    <article
+                        class="skill-card skill-card-dark"
+                    >
 
                         <span class="skill-number">
                             04
                         </span>
 
                         <h3>
-                            Système d'éxploitation
+                            Systèmes d'exploitation
                         </h3>
 
                         <p>
-                            Les outils qui permettent de
-                            transformer le code en projet réel.
+                            Environnements utilisés pour le
+                            développement, les tests et les projets.
                         </p>
 
 
                         <div class="skill-list">
 
                             <span class="skill-item">
-                                <i class="devicon-git-plain"></i>
+                                <i class="devicon-debian-plain"></i>
                                 Debian
                             </span>
 
                             <span class="skill-item">
-                                <i class="devicon-github-original"></i>
+                                <i class="devicon-windows8-original"></i>
                                 Windows 10
                             </span>
 
                             <span class="skill-item">
-                                <i class="devicon-vscode-plain"></i>
+                                <i class="devicon-windows11-original"></i>
                                 Windows 11
                             </span>
 
                             <span class="skill-item">
-                                <i class="devicon-docker-plain"></i>
+                                <i class="devicon-ubuntu-plain"></i>
                                 Ubuntu
                             </span>
 
                             <span class="skill-item">
+                                <i class="devicon-apple-original"></i>
+                                macOS
+                            </span>
+
+                            <span class="skill-item">
                                 <i class="devicon-linux-plain"></i>
-                                MacOs
+                                Linux
                             </span>
 
                         </div>
 
                     </article>
+
 
                     <!-- =================================
                          TOOLS
@@ -259,8 +267,8 @@ export function Skills() {
                         </h3>
 
                         <p>
-                            Les outils qui permettent de
-                            transformer le code en projet réel.
+                            Les outils utilisés pour développer,
+                            versionner et déployer les projets.
                         </p>
 
 
@@ -289,6 +297,77 @@ export function Skills() {
                             <span class="skill-item">
                                 <i class="devicon-linux-plain"></i>
                                 Linux
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         METHODS & DESIGN
+                    ================================== -->
+
+                    <article
+                        class="skill-card skill-card-dark"
+                    >
+
+                        <span class="skill-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Méthodes & Conception
+                        </h3>
+
+                        <p>
+                            Analyse, modélisation et conception
+                            de systèmes logiciels.
+                        </p>
+
+
+                        <div class="skill-list">
+
+                            <span class="skill-item">
+                                <strong>
+                                    M
+                                </strong>
+                                MERISE
+                            </span>
+
+                            <span class="skill-item">
+                                <strong>
+                                    U
+                                </strong>
+                                UML
+                            </span>
+
+                            <span class="skill-item">
+                                <strong>
+                                    SQL
+                                </strong>
+                                Modélisation BDD
+                            </span>
+
+                            <span class="skill-item">
+                                <strong>
+                                    &lt;/&gt;
+                                </strong>
+                                Algorithmique
+                            </span>
+
+                            <span class="skill-item">
+                                <strong>
+                                    API
+                                </strong>
+                                Conception d'API
+                            </span>
+
+                            <span class="skill-item">
+                                <strong>
+                                    SOL
+                                </strong>
+                                Architecture logicielle
                             </span>
 
                         </div>

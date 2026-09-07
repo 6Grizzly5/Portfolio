@@ -32,8 +32,11 @@ import { Roadmap }
     from './components/Roadmap'
 
 
-import { Contact }
-    from './components/Contact'
+import {
+    Contact,
+    initContact
+}
+from './components/Contact'
 
 
 import {
@@ -173,3 +176,10 @@ initScrollAnimations()
 ================================================ */
 
 initFloatingTech()
+
+
+/* ================================================
+   CONTACT FORM
+================================================ */
+
+initContact()

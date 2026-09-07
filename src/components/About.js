@@ -42,7 +42,7 @@ export function About() {
                         <div class="about-image-backdrop"></div>
 
                         <img
-                            src="/images/prosper4.png"
+                            src="/images/prosper4(2).jpg"
                             alt="RAZANAKA Prosper Andriniaina Félix"
                             class="about-image"
                         >

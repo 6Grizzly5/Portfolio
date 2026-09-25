@@ -154,8 +154,8 @@ export function Projects() {
                         <div class="project-image">
 
                             <img
-                                src="/images/energy-manager.jpg"
-                                alt="Application de gestion d'énergie"
+                                src="/images/smartquiz.png"
+                                alt="SmartQuiz"
                             >
 
                             <span class="project-index">
@@ -172,7 +172,7 @@ export function Projects() {
                             </span>
 
                             <h3>
-                                Energy Manager
+
                             </h3>
 
                             <p>
@@ -190,14 +190,7 @@ export function Projects() {
 
                             </div>
 
-                            <a
-                                href="https://github.com/6Grizzly5"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
-                                Voir le projet ↗
-                            </a>
+
 
                         </div>
 

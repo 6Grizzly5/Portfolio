@@ -14,42 +14,48 @@ export function initScrollAnimations() {
     ============================================
     */
 
-    gsap.utils.toArray('.page-section').forEach(
-        (section) => {
+    gsap.utils
+        .toArray('.page-section')
+        .forEach(
+            (section) => {
 
-            gsap.fromTo(
-                section,
+                gsap.fromTo(
+                    section,
 
-                {
-                    y: 100,
-                    opacity: 0,
-                    scale: 0.96
-                },
+                    {
+                        y: 100,
+                        opacity: 0,
+                        scale: 0.96
+                    },
 
-                {
-                    y: 0,
-                    opacity: 1,
-                    scale: 1,
+                    {
+                        y: 0,
+                        opacity: 1,
+                        scale: 1,
 
-                    duration: 1.2,
+                        duration: 1.2,
 
-                    ease:
-                        'power3.out',
+                        ease:
+                            'power3.out',
 
-                    scrollTrigger: {
+                        scrollTrigger: {
 
-                        trigger: section,
+                            trigger:
+                                section,
 
-                        start:
-                            'top 85%',
+                            start:
+                                'top 85%',
 
-                        toggleActions:
-                            'play none none none'
+                            toggleActions:
+                                'play none none none'
+
+                        }
+
                     }
-                }
-            )
-        }
-    )
+                )
+
+            }
+        )
 
 
     /*
@@ -59,36 +65,50 @@ export function initScrollAnimations() {
     */
 
     const hero =
-        document.querySelector('.hero-section')
+        document.querySelector(
+            '.hero-section'
+        )
 
 
     if (hero) {
 
         const title =
-            hero.querySelector('.hero-title')
+            hero.querySelector(
+                '.hero-title'
+            )
 
         const role =
-            hero.querySelector('.hero-role')
+            hero.querySelector(
+                '.hero-role'
+            )
 
         const description =
-            hero.querySelector('.hero-description')
+            hero.querySelector(
+                '.hero-description'
+            )
 
         const actions =
-            hero.querySelector('.hero-actions')
+            hero.querySelector(
+                '.hero-actions'
+            )
 
         const visual =
-            hero.querySelector('.hero-visual')
+            hero.querySelector(
+                '.hero-visual'
+            )
 
 
         const timeline =
             gsap.timeline({
                 defaults: {
-                    ease: 'power3.out'
+                    ease:
+                        'power3.out'
                 }
             })
 
 
         timeline
+
             .from(
                 '.hero-label',
                 {
@@ -141,7 +161,8 @@ export function initScrollAnimations() {
             .from(
                 visual,
                 {
-                    x: 100,
+                    x: window.innerWidth > 900 ? 100 : 0,
+                    y: window.innerWidth > 900 ? 0 : 60,
                     opacity: 0,
                     rotate: 3,
                     duration: 1
@@ -160,17 +181,23 @@ export function initScrollAnimations() {
 
                 y: -80,
 
-                ease: 'none',
+                ease:
+                    'none',
 
                 scrollTrigger: {
 
-                    trigger: hero,
+                    trigger:
+                        hero,
 
-                    start: 'top top',
+                    start:
+                        'top top',
 
-                    end: 'bottom top',
+                    end:
+                        'bottom top',
 
-                    scrub: true
+                    scrub:
+                        true
+
                 }
 
             }
@@ -186,7 +213,9 @@ export function initScrollAnimations() {
     */
 
     const about =
-        document.querySelector('.about-section')
+        document.querySelector(
+            '.about-section'
+        )
 
 
     if (about) {
@@ -204,9 +233,11 @@ export function initScrollAnimations() {
 
                 scrollTrigger: {
 
-                    trigger: about,
+                    trigger:
+                        about,
 
-                    start: 'top 70%'
+                    start:
+                        'top 70%'
 
                 }
 
@@ -227,9 +258,11 @@ export function initScrollAnimations() {
 
                 scrollTrigger: {
 
-                    trigger: about,
+                    trigger:
+                        about,
 
-                    start: 'top 70%'
+                    start:
+                        'top 70%'
 
                 }
 
@@ -247,9 +280,11 @@ export function initScrollAnimations() {
 
                 scrollTrigger: {
 
-                    trigger: about,
+                    trigger:
+                        about,
 
-                    start: 'top 70%'
+                    start:
+                        'top 70%'
 
                 }
 
@@ -277,21 +312,25 @@ export function initScrollAnimations() {
 
                         y: 80,
                         opacity: 0,
+
                         rotate:
                             index % 2 === 0
                                 ? -2
                                 : 2,
 
-                        duration: 0.8,
+                        duration:
+                            0.8,
 
                         ease:
                             'power3.out',
 
                         scrollTrigger: {
 
-                            trigger: card,
+                            trigger:
+                                card,
 
-                            start: 'top 85%',
+                            start:
+                                'top 85%',
 
                             toggleActions:
                                 'play none none none'
@@ -312,7 +351,9 @@ export function initScrollAnimations() {
     */
 
     gsap.utils
-        .toArray('.project-card')
+        .toArray(
+            '.projects-track .project-card'
+        )
         .forEach(
             (card, index) => {
 
@@ -321,10 +362,11 @@ export function initScrollAnimations() {
 
                     {
 
-                        x: 100,
+                        y: 60,
                         opacity: 0,
 
-                        duration: 0.9,
+                        duration:
+                            0.9,
 
                         delay:
                             index * 0.08,
@@ -335,9 +377,10 @@ export function initScrollAnimations() {
                         scrollTrigger: {
 
                             trigger:
-                                '.projects-track',
+                                '.projects-carousel',
 
-                            start: 'top 80%',
+                            start:
+                                'top 80%',
 
                             toggleActions:
                                 'play none none none'
@@ -364,7 +407,8 @@ export function initScrollAnimations() {
             x: 100,
             opacity: 0,
 
-            duration: 1,
+            duration:
+                1,
 
             ease:
                 'power3.out',
@@ -374,7 +418,8 @@ export function initScrollAnimations() {
                 trigger:
                     '.contact-section',
 
-                start: 'top 75%'
+                start:
+                    'top 75%'
 
             }
 
@@ -389,7 +434,8 @@ export function initScrollAnimations() {
             x: -80,
             opacity: 0,
 
-            duration: 1,
+            duration:
+                1,
 
             ease:
                 'power3.out',
@@ -399,7 +445,8 @@ export function initScrollAnimations() {
                 trigger:
                     '.contact-section',
 
-                start: 'top 75%'
+                start:
+                    'top 75%'
 
             }
 
@@ -407,74 +454,3 @@ export function initScrollAnimations() {
     )
 
 }
-    /*
-    ============================================
-    PROJECT CAROUSEL
-    ============================================
-    */
-
-    const track =
-        document.querySelector('.projects-track')
-
-    const nextButton =
-        document.querySelector('#projects-next')
-
-    const prevButton =
-        document.querySelector('#projects-prev')
-
-
-    if (track && nextButton && prevButton) {
-
-        const scrollAmount = 420
-
-
-        nextButton.addEventListener(
-            'click',
-            () => {
-
-                gsap.to(
-                    track,
-                    {
-
-                        scrollLeft:
-                            track.scrollLeft +
-                            scrollAmount,
-
-                        duration:
-                            0.7,
-
-                        ease:
-                            'power3.out'
-
-                    }
-                )
-
-            }
-        )
-
-
-        prevButton.addEventListener(
-            'click',
-            () => {
-
-                gsap.to(
-                    track,
-                    {
-
-                        scrollLeft:
-                            track.scrollLeft -
-                            scrollAmount,
-
-                        duration:
-                            0.7,
-
-                        ease:
-                            'power3.out'
-
-                    }
-                )
-
-            }
-        )
-
-    }

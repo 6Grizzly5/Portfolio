@@ -45,6 +45,20 @@ export function Hero() {
                     </div>
 
 
+                    <div class="hero-status">
+
+                        <span
+                            class="hero-status-dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span>
+                            À la recherche d'un stage de 6 mois
+                        </span>
+
+                    </div>
+
+
                     <p class="hero-description">
 
                         Je conçois des applications web,
@@ -83,13 +97,7 @@ export function Hero() {
 
                 <div class="hero-visual">
 
-                    <div
-                        class="hero-image-wrapper"
-                        style="
-                            width: min(100%, 420px);
-                            height: 500px;
-                        "
-                    >
+                    <div class="hero-image-wrapper">
 
                         <img
                             src="/images/prosper4(2).jpg"
@@ -107,7 +115,7 @@ export function Hero() {
                         </span>
 
                         <strong>
-                            Stage · Collaboration
+                            Stage de 6 mois
                         </strong>
 
                     </div>

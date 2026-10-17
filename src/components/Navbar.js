@@ -104,7 +104,7 @@ export function Navbar() {
                         href="#roadmap"
                         class="navbar-link"
                     >
-                        Roadmap
+                        Parcours
                     </a>
 
 
@@ -125,7 +125,7 @@ export function Navbar() {
                 <a
                     href="/cv/CV_Prosper.pdf"
                     download="CV_Prosper.pdf"
-                    class="mobile-cv-link"
+                    class="navbar-cv"
                 >
                     Mon CV
                 </a>
@@ -198,7 +198,7 @@ export function Navbar() {
                         href="#roadmap"
                         class="mobile-nav-link"
                     >
-                        Roadmap
+                        Parcours
                     </a>
 
 

@@ -17,7 +17,7 @@ export function Roadmap() {
                 <div class="section-heading">
 
                     <span class="section-label">
-                        03 / PARCOURS
+                        04 / PARCOURS
                     </span>
 
                     <h2 class="section-title">
@@ -307,7 +307,7 @@ export function Roadmap() {
                             </h3>
 
                             <p>
-                                Première portfolio personnel
+                                Premier portfolio personnel
                                 réunissant mon parcours,
                                 mes compétences et mes projets.
                             </p>
@@ -342,7 +342,7 @@ export function Roadmap() {
                             </span>
 
                             <h3>
-                                Stage professionnel
+                                Stage de 6 mois
                             </h3>
 
                             <p>

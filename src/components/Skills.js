@@ -218,23 +218,8 @@ export function Skills() {
                         <div class="skill-list">
 
                             <span class="skill-item">
-                                <i class="devicon-debian-plain"></i>
-                                Debian
-                            </span>
-
-                            <span class="skill-item">
-                                <i class="devicon-windows8-original"></i>
-                                Windows 10
-                            </span>
-
-                            <span class="skill-item">
                                 <i class="devicon-windows11-original"></i>
-                                Windows 11
-                            </span>
-
-                            <span class="skill-item">
-                                <i class="devicon-ubuntu-plain"></i>
-                                Ubuntu
+                                Windows
                             </span>
 
                             <span class="skill-item">
@@ -292,11 +277,6 @@ export function Skills() {
                             <span class="skill-item">
                                 <i class="devicon-docker-plain"></i>
                                 Docker
-                            </span>
-
-                            <span class="skill-item">
-                                <i class="devicon-linux-plain"></i>
-                                Linux
                             </span>
 
                         </div>
@@ -365,7 +345,7 @@ export function Skills() {
 
                             <span class="skill-item">
                                 <strong>
-                                    SOL
+                                    ARC
                                 </strong>
                                 Architecture logicielle
                             </span>

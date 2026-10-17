@@ -22,7 +22,7 @@ export function Contact() {
                 <div class="section-heading">
 
                     <span class="section-label">
-                        04 / CONTACT
+                        05 / CONTACT
                     </span>
 
                     <h2 class="section-title">

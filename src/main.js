@@ -24,8 +24,11 @@ import { Skills }
     from './components/Skills'
 
 
-import { Projects }
-    from './components/Projects'
+import {
+    Projects,
+    initProjectsCarousel
+}
+from './components/Projects'
 
 
 import { Roadmap }
@@ -169,6 +172,13 @@ initNavbar()
 ================================================ */
 
 initScrollAnimations()
+
+
+/* ================================================
+   PROJECT CAROUSEL
+================================================ */
+
+initProjectsCarousel()
 
 
 /* ================================================
